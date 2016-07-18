@@ -1,7 +1,7 @@
 ---
 title       : RF Pulse shapes and their Fourier Transforms
 subtitle    : Coursera DDP assignment
-author      : DDP_assignment
+author      : AK2
 job         : Graduate Student
 framework   : io2012  # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
