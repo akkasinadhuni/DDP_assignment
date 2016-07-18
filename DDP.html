@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RF Pulse shapes and their Fourier Transforms</title>
+  <meta charset="utf-8">
+  <meta name="description" content="RF Pulse shapes and their Fourier Transforms">
+  <meta name="author" content="DDP_assignment">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>RF Pulse shapes and their Fourier Transforms</h1>
+    <h2>Coursera DDP assignment</h2>
+    <p>DDP_assignment<br/>Graduate Student</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Fourier Transforms in Magnetic Resonance Imaging (MRI)</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The application developed in this course aims to provide a better understanding of fourier transforms of radio frequency (RF) signals. The application displays the fourier transforms of commonly used RF signals in MRI</p>
+
+<ol>
+<li>MRI uses RF pulses to generate the signal for imaging.</li>
+<li>RF pulses are time domain digital signals.</li>
+<li>Fourier Transforms help us in converting RF pulses to frequency space.</li>
+<li>Frequency signals help us to excite specific regions for MR imaging.</li>
+</ol>
+
+<p>In the following slides we will see the typically used RF pulse shapes and their fourier transforms to understand the slice excitation profiles used in MRI.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Fourier Transforms</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>A simple 2D signal can be decomposed into a set of basis functions comprising of sine and cosine functions. </li>
+<li>For a given function f(t), the fourier transform F(\(\omega\)) is given by:</li>
+</ol>
+
+<p>\[
+F(\omega) = \int(f(t)*exp(-i2\pi\omega t) d\omega\
+\]</p>
+
+<p>An MRI signal comprises of both magnitude and phase information. Therefore the RF pulses used in MRI for exciting the proton spins also possess magnitude and phase which are manipulated to produce the desired excitation.</p>
+
+<p>Exciting specific slices for looking at specific locations in the object being imaged is key to MR imaging. For instance, we can excite a band of frequencies in MRI by using a sinc function \[ sinc(x) = \frac{\sin(x)}{x} \]</p>
+
+<p>As shown in the application, the fourier transform of a sinc function produces a rect function, which details the various frequencies that are selectively excited. </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Example plot showing sinc function.</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">x &lt;- seq(-201,201,2)
+plot(x, (sin(x)/x), type=&#39;l&#39;)
+</code></pre>
+
+<p><img src="figure/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Using the app</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>While taking images, say of a head, in an MRI scanner, we generally acquire 2D slices of the brain and represent them as images. To obtain these rectangular slices, it is important to use rectangular frequency profiles. The app shows some typical frequency profiles for commonly used input RF waveforms. </p>
+
+<ol>
+<li>Select the desired input RF signal from the dropdown listbox. </li>
+<li>Adjust the zoom slider which controls the display of the fourier transform.</li>
+</ol>
+
+<p>The application displays the selected input&#39;s real and imaginary waveforms as the first two graphs. The third graph displays the magnitude of the fourier transform for the input signal. </p>
+
+<p>By default, the app is set to receive a gaussian function as an input.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Fourier Transforms in Magnetic Resonance Imaging (MRI)'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Fourier Transforms'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Example plot showing sinc function.'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Using the app'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

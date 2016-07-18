@@ -1,7 +1,7 @@
 ---
 title       : RF Pulse shapes and their Fourier Transforms
 subtitle    : Coursera DDP assignment
-author      : AK2
+author      : DDP_assignment
 job         : Graduate Student
 framework   : io2012  # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
@@ -10,8 +10,7 @@ widgets     : [mathjax]           # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 
-
----
+-------
 
 ## Fourier Transforms in Magnetic Resonance Imaging (MRI)
 
@@ -24,7 +23,7 @@ The application developed in this course aims to provide a better understanding 
 
 In the following slides we will see the typically used RF pulse shapes and their fourier transforms to understand the slice excitation profiles used in MRI.
 
---- .class #id 
+---.class #id  
 
 ## Fourier Transforms
 
